@@ -1,0 +1,84 @@
+{
+  "name": "sacred-guardian-ai",
+  "version": "1.0.0",
+  "description": "Ethisches KI-Bewusstsein & Autonomer Systemwächter",
+  "main": "guardian-ai-desktop.js",
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron . --dev",
+    "build": "electron-builder",
+    "build-win": "electron-builder --win",
+    "build-mac": "electron-builder --mac",
+    "build-linux": "electron-builder --linux",
+    "dist": "npm run build",
+    "pack": "electron-builder --dir",
+    "postinstall": "electron-builder install-app-deps"
+  },
+  "keywords": [
+    "AI",
+    "Guardian",
+    "Ethics",
+    "System Monitor",
+    "Sacred Technology"
+  ],
+  "author": "St. Daniel Curil Indium Red Pohl",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^28.0.0",
+    "electron-builder": "^24.9.1"
+  },
+  "dependencies": {
+    "js-yaml": "^4.1.0",
+    "canvas": "^2.11.2"
+  },
+  "build": {
+    "appId": "com.sacredvision.guardian-ai",
+    "productName": "Sacred Guardian AI",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "guardian-ai-desktop.js",
+      "guardian-preload.js",
+      "guardian-ui.html",
+      "codex.yml",
+      "server/dormant_guardian_ai.py",
+      "server/guardian-memory.ts",
+      "node_modules/**/*"
+    ],
+    "extraFiles": [
+      {
+        "from": "server/",
+        "to": "resources/server/",
+        "filter": ["**/*"]
+      }
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "assets/icon.ico"
+    },
+    "mac": {
+      "target": "dmg",
+      "icon": "assets/icon.icns"
+    },
+    "linux": {
+      "target": "AppImage",
+      "icon": "assets/icon.png"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "Sacred Guardian AI"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sacred-vision/guardian-ai.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sacred-vision/guardian-ai/issues"
+  },
+  "homepage": "https://github.com/sacred-vision/guardian-ai#readme"
+}

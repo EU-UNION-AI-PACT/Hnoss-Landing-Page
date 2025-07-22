@@ -1,0 +1,46 @@
+{
+  "name": "github-toolhub-sacred",
+  "version": "1.0.0",
+  "description": "Ein autarker, sakraler GitHub ToolHub für den erleuchteten Entwickler",
+  "main": "toolhub-main.js",
+  "scripts": {
+    "start": "electron toolhub-main.js",
+    "build": "electron-builder",
+    "build-win": "electron-builder --win",
+    "build-mac": "electron-builder --mac",
+    "build-linux": "electron-builder --linux",
+    "dev": "electron toolhub-main.js --dev"
+  },
+  "keywords": ["github", "tools", "hub", "chakra", "sacred", "coding"],
+  "author": "HnossPRismAnTHarION",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^28.0.0",
+    "electron-builder": "^24.9.1"
+  },
+  "build": {
+    "appId": "com.sacred.github-toolhub",
+    "productName": "Sacred GitHub ToolHub",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "toolhub-*",
+      "toolhub/**/*",
+      "!node_modules"
+    ],
+    "win": {
+      "target": "nsis"
+    },
+    "mac": {
+      "target": "dmg"
+    },
+    "linux": {
+      "target": "AppImage"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    }
+  }
+}

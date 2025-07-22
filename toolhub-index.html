@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sacred GitHub ToolHub 🌌</title>
+    <link rel="stylesheet" href="toolhub-styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="cosmic-bg">
+    <!-- Hauptcontainer -->
+    <div class="container mx-auto px-6 py-8">
+        <!-- Header mit mystischem Flair -->
+        <header class="text-center mb-12">
+            <h1 class="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 mb-4">
+                🌌 Sacred GitHub ToolHub 🌌
+            </h1>
+            <p class="text-xl text-gray-300 max-w-2xl mx-auto">
+                Ein autarker, spirituell ausgerichteter Hub für alle deine GitHub-Tools und Repositories
+            </p>
+            <div class="mt-6 text-sm text-gray-400">
+                <span class="chakra-glow">✨ Erwecke die Macht deiner Repositories ✨</span>
+            </div>
+        </header>
+
+        <!-- Status-Anzeige -->
+        <div class="text-center mb-8">
+            <p id="status-message" class="text-lg text-cyan-400 cosmic-pulse">
+                Lade dein digitales Chakra-System...
+            </p>
+        </div>
+
+        <!-- Tool-Grid -->
+        <div id="toolbar-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            <!-- Tools werden hier dynamisch eingefügt -->
+        </div>
+
+        <!-- Footer mit Chakra-Weisheit -->
+        <footer class="text-center mt-16 text-gray-500">
+            <p>🕉️ Möge dein Code im Einklang mit dem Universum stehen 🕉️</p>
+            <p class="text-xs mt-2">Drücke Strg+Alt+A für das Admin-Portal</p>
+        </footer>
+    </div>
+
+    <!-- Admin Modal - Das heilige Portal -->
+    <div id="admin-modal" class="modal-overlay hidden">
+        <div class="modal-content cosmic-card">
+            <div class="text-center mb-6">
+                <h2 class="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-500">
+                    ⚙️ Admin-Portal ⚙️
+                </h2>
+                <p class="text-gray-400 mt-2">Das heilige Tor zur Repository-Verwaltung</p>
+            </div>
+
+            <!-- Login-Sektion -->
+            <div id="login-section">
+                <div class="space-y-4">
+                    <input type="text" id="admin-username" placeholder="🧙‍♂️ Benutzername" class="cosmic-input"/>
+                    <input type="password" id="admin-password" placeholder="🔐 Geheimes Mantra" class="cosmic-input"/>
+                    <button id="login-btn" class="cosmic-button w-full glow-on-hover">
+                        🌟 Eintreten in das Portal 🌟
+                    </button>
+                </div>
+                <p id="login-status" class="text-red-400 text-sm mt-4 text-center"></p>
+            </div>
+
+            <!-- Admin-Kontrollen -->
+            <div id="admin-controls" class="hidden space-y-6">
+                <!-- Repository hinzufügen -->
+                <div class="cosmic-section">
+                    <h3 class="text-xl text-cyan-400 mb-4 text-center flex items-center justify-center">
+                        🌟 Repository hinzufügen 🌟
+                    </h3>
+                    <div class="space-y-3">
+                        <input type="text" id="repo-url" placeholder="🔗 GitHub Repository URL" class="cosmic-input"/>
+                        <div class="grid grid-cols-2 gap-3">
+                            <input type="text" id="repo-category" placeholder="📁 Kategorie" class="cosmic-input"/>
+                            <select id="repo-type" class="cosmic-select">
+                                <option value="">🎯 Tool-Typ auswählen</option>
+                                <option value="url">🌐 Web-Link (URL)</option>
+                                <option value="cli">⌨️ CLI-Tool</option>
+                                <option value="podman">🐳 Podman Container</option>
+                                <option value="electron">⚡ Electron App</option>
+                            </select>
+                        </div>
+                        <input type="text" id="repo-description" placeholder="📝 Beschreibung (optional)" class="cosmic-input"/>
+                        <input type="text" id="repo-podman-image" placeholder="🐳 Podman Image (falls Typ Podman)" class="cosmic-input"/>
+                        <input type="text" id="repo-start-command" placeholder="⚡ Startbefehl (optional)" class="cosmic-input"/>
+                        <button id="add-repo-btn" class="cosmic-button w-full glow-on-hover">
+                            ✨ Repository manifestieren ✨
+                        </button>
+                    </div>
+                </div>
+
+                <!-- System-Befehle -->
+                <div class="cosmic-section">
+                    <h3 class="text-xl text-purple-400 mb-4 text-center flex items-center justify-center">
+                        🔮 Mystische Kommandos 🔮
+                    </h3>
+                    <div class="space-y-3">
+                        <input type="text" id="admin-command-input" placeholder="💫 Befehl eingeben (z.B. /refresh_tools)" class="cosmic-input"/>
+                        <button id="execute-command-btn" class="cosmic-button w-full glow-on-hover">
+                            🚀 Befehl ausführen 🚀
+                        </button>
+                        <div class="text-xs text-gray-500 space-y-1">
+                            <p>📚 Verfügbare Befehle:</p>
+                            <p>• /refresh_tools - Tools neu laden</p>
+                            <p>• /delete_repo [URL] - Repository entfernen</p>
+                        </div>
+                    </div>
+                </div>
+
+                <p id="admin-status" class="text-center text-sm min-h-[20px]"></p>
+
+                <button id="close-admin-btn" class="cosmic-button w-full bg-gradient-to-r from-red-600 to-red-800 hover:from-red-700 hover:to-red-900">
+                    🚪 Portal verlassen 🚪
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Geheimer Admin-Trigger -->
+    <button id="open-admin-btn" class="hidden-admin-trigger" title="Admin-Portal (Strg+Alt+A)">⚙️</button>
+
+    <script src="toolhub-renderer.js"></script>
+</body>
+</html>

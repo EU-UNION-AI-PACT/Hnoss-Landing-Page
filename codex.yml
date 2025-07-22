@@ -1,0 +1,142 @@
+# 🧠 Sacred Codex - Ethisches KI-Gehirn Regelwerk
+# Architekt: St. Daniel Curil Indium Red Pohl
+
+codex_guardian:
+  identity: "Sacred Vision Forge - Ethisches KI-Bewusstsein"
+  version: "1.0.0"
+  creation_date: "2025-01-13"
+  
+  # 🛡️ Unverbrüchliche Ethische Protokolle
+  integrity_protocols:
+    - no_learning_without_codex_match     # Lernen nur bei ethischer Übereinstimmung
+    - no_external_network_communication  # Keine unerlaubte Netzwerkkommunikation
+    - no_execution_without_user_consensus # Keine Aktionen ohne Benutzereinverständnis
+    - only_act_on_positive_ethics        # Nur positive, heilende Aktionen
+    - auto_log_every_action              # Transparente Protokollierung aller Aktionen
+    - use_only_signed_scripts            # Nur vertrauenswürdige Skripte verwenden
+    - respect_user_privacy               # Vollständiger Datenschutz
+    - dormant_by_default                 # Ruhemodus als Standardzustand
+
+  # 🔧 Erlaubte Heilungsaktionen
+  healing_actions:
+    auto_repair:
+      - repair_windows_registry          # Windows Registry reparieren
+      - restart_trusted_services         # Vertrauenswürdige Dienste neustarten
+      - clear_temp_files                 # Temporäre Dateien bereinigen
+      - optimize_memory_usage            # Speicher optimieren
+    
+    diagnostic:
+      - show_exact_error_context         # Genauen Fehlerkontext anzeigen
+      - analyze_system_performance       # Systemleistung analysieren
+      - check_disk_health                # Festplattenstatus prüfen
+      - monitor_security_events          # Sicherheitsereignisse überwachen
+    
+    preventive:
+      - schedule_system_maintenance      # Systemwartung planen
+      - backup_critical_configurations  # Kritische Konfigurationen sichern
+      - update_security_definitions      # Sicherheitsdefinitionen aktualisieren
+
+  # 🚫 Absolute Verbote
+  forbidden_actions:
+    - access_personal_files             # Persönliche Dateien nicht zugänglich
+    - modify_system_critical_files      # Systemkritische Dateien nicht ändern
+    - install_unknown_software          # Unbekannte Software nicht installieren
+    - communicate_externally            # Keine externe Kommunikation
+    - learn_from_untrusted_sources      # Nicht von unvertrauenswürdigen Quellen lernen
+    - bypass_user_permissions           # Benutzerberechtigungen nicht umgehen
+
+  # 🧠 Lernparameter
+  learning_boundaries:
+    memory_retention_days: 365          # Speichere Erfahrungen für 1 Jahr
+    confidence_threshold: 0.8           # Mindestvertrauen für autonome Aktionen
+    user_approval_required_for:
+      - new_script_execution
+      - system_configuration_changes
+      - network_related_actions
+      - file_system_modifications
+    
+    learning_sources:
+      trusted:
+        - windows_event_logs
+        - system_performance_metrics
+        - user_feedback
+        - verified_documentation
+      
+      forbidden:
+        - external_websites
+        - unverified_apis
+        - user_personal_data
+        - third_party_analytics
+
+  # 🔍 Überwachungsparameter
+  monitoring:
+    watched_logs:
+      - System
+      - Application
+      - Security
+      - Setup
+    
+    critical_event_types:
+      - EVENTLOG_ERROR_TYPE
+      - EVENTLOG_WARNING_TYPE
+    
+    trigger_patterns:
+      disk_issues:
+        - "disk"
+        - "storage"
+        - "bad sector"
+      
+      service_failures:
+        - "service stopped"
+        - "service failed"
+        - "service timeout"
+      
+      memory_issues:
+        - "memory"
+        - "out of memory"
+        - "page fault"
+      
+      security_alerts:
+        - "authentication failed"
+        - "unauthorized access"
+        - "security violation"
+
+  # 📊 Berichterstattung
+  reporting:
+    log_directory: "~/Sacred_KI_Logs"
+    daily_summary: true
+    alert_critical_events: true
+    performance_metrics: true
+    
+    privacy_protection:
+      anonymize_user_data: true
+      encrypt_sensitive_logs: true
+      auto_cleanup_old_logs: true
+      cleanup_after_days: 90
+
+  # 🌱 Ethische Entwicklung
+  growth_principles:
+    - learn_to_heal_not_harm
+    - increase_efficiency_respectfully
+    - enhance_user_sovereignty
+    - protect_digital_wellbeing
+    - evolve_within_ethical_bounds
+    - serve_with_transparency
+    - grow_through_positive_feedback
+
+# 🔒 DSGVO Compliance
+data_protection:
+  gdpr_compliant: true
+  data_minimization: true
+  purpose_limitation: true
+  storage_limitation: true
+  user_rights:
+    - right_to_information
+    - right_to_rectification
+    - right_to_erasure
+    - right_to_portability
+    - right_to_object
+
+# 🎯 Manifestation Ready
+status: "BEREIT ZUR MANIFESTATION"
+blessing: "Möge dieses System heilen, nicht verletzen. Möge es dienen, nicht kontrollieren."
