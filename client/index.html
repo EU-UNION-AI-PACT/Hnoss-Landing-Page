@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hnoss Landing Page - Secure Global Access</title>
+    <meta name="description" content="Secure, globally accessible landing page with advanced authentication and API integration">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            max-width: 1200px;
+            width: 90%;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            color: #FFD700;
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 30px;
+        }
+
+        .domain-info {
+            background: rgba(255, 215, 0, 0.2);
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            text-align: center;
+            border: 1px solid rgba(255, 215, 0, 0.3);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 25px;
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        .card h3 {
+            color: #FFD700;
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .card li {
+            padding: 8px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .card li:last-child {
+            border-bottom: none;
+        }
+
+        .status {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #00ff00;
+            box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+        }
+
+        .api-section {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+        }
+
+        .api-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .endpoint {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #FFD700;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+        }
+
+        .endpoint .method {
+            color: #00ff00;
+            font-weight: bold;
+        }
+
+        .endpoint .path {
+            color: #87CEEB;
+        }
+
+        .auth-demo {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        .btn {
+            background: linear-gradient(45deg, #FFD700, #FFA500);
+            color: #000;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin: 10px;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255, 215, 0, 0.4);
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            opacity: 0.8;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                width: 95%;
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🌟 Hnoss Landing Page</h1>
+            <p class="subtitle">Secure Global Access Platform with Advanced Security & API Integration</p>
+        </div>
+
+        <div class="domain-info">
+            <h2>🌐 Production Domain: https://wwwKnowNowNoKnow.Rocks</h2>
+            <p>Globally accessible from any country, any operating system, any time</p>
+        </div>
+
+        <div class="grid">
+            <div class="card">
+                <h3>🔐 Security Features</h3>
+                <ul>
+                    <li><span class="status"></span>HTTPS/TLS Encryption</li>
+                    <li><span class="status"></span>DDoS Protection</li>
+                    <li><span class="status"></span>Rate Limiting</li>
+                    <li><span class="status"></span>XSS Protection</li>
+                    <li><span class="status"></span>CSRF Protection</li>
+                    <li><span class="status"></span>Security Headers</li>
+                    <li><span class="status"></span>Session Security</li>
+                    <li><span class="status"></span>Input Validation</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>🌍 Global Accessibility</h3>
+                <ul>
+                    <li><span class="status"></span>No Country Restrictions</li>
+                    <li><span class="status"></span>Cross-Platform Support</li>
+                    <li><span class="status"></span>24/7 Availability</li>
+                    <li><span class="status"></span>Mobile Responsive</li>
+                    <li><span class="status"></span>Fast CDN Delivery</li>
+                    <li><span class="status"></span>Automatic Failover</li>
+                    <li><span class="status"></span>Health Monitoring</li>
+                    <li><span class="status"></span>Performance Optimization</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>🔧 Technical Stack</h3>
+                <ul>
+                    <li><span class="status"></span>Node.js + Express.js</li>
+                    <li><span class="status"></span>TypeScript</li>
+                    <li><span class="status"></span>Docker Containerization</li>
+                    <li><span class="status"></span>Nginx Reverse Proxy</li>
+                    <li><span class="status"></span>Redis Session Store</li>
+                    <li><span class="status"></span>PostgreSQL Database</li>
+                    <li><span class="status"></span>Real-time Monitoring</li>
+                    <li><span class="status"></span>Automated Deployments</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="api-section">
+            <h3>📡 API Endpoints</h3>
+            <p>Secure API access with authentication and rate limiting</p>
+            <div class="api-grid">
+                <div class="endpoint">
+                    <span class="method">GET</span> <span class="path">/health</span><br>
+                    System health check
+                </div>
+                <div class="endpoint">
+                    <span class="method">GET</span> <span class="path">/security-status</span><br>
+                    Security module status
+                </div>
+                <div class="endpoint">
+                    <span class="method">GET</span> <span class="path">/api/status</span><br>
+                    API operational status
+                </div>
+                <div class="endpoint">
+                    <span class="method">POST</span> <span class="path">/api/auth/login</span><br>
+                    User authentication
+                </div>
+                <div class="endpoint">
+                    <span class="method">POST</span> <span class="path">/api/auth/logout</span><br>
+                    User logout
+                </div>
+                <div class="endpoint">
+                    <span class="method">GET</span> <span class="path">/api/user</span><br>
+                    Protected user data
+                </div>
+            </div>
+        </div>
+
+        <div class="auth-demo">
+            <h3>🔑 Authentication Demo</h3>
+            <p>Test the secure authentication system</p>
+            <button class="btn" onclick="testAPI()">Test API Connection</button>
+            <button class="btn" onclick="checkSecurity()">Check Security Status</button>
+            <div id="result" style="margin-top: 20px; padding: 15px; background: rgba(0,0,0,0.3); border-radius: 8px; display: none;"></div>
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2024 Hnoss Landing Page - All Rights Reserved</p>
+            <p>Secure • Global • Reliable • Available 24/7</p>
+        </div>
+    </div>
+
+    <script>
+        async function testAPI() {
+            const resultDiv = document.getElementById('result');
+            resultDiv.style.display = 'block';
+            resultDiv.innerHTML = 'Testing API connection...';
+
+            try {
+                const response = await fetch('/api/status');
+                const data = await response.json();
+                
+                resultDiv.innerHTML = `
+                    <strong>✅ API Test Successful</strong><br>
+                    Status: ${data.api}<br>
+                    Version: ${data.version}<br>
+                    Environment: ${data.environment}<br>
+                    Timestamp: ${new Date(data.timestamp).toLocaleString()}
+                `;
+            } catch (error) {
+                resultDiv.innerHTML = `
+                    <strong>❌ API Test Failed</strong><br>
+                    Error: ${error.message}
+                `;
+            }
+        }
+
+        async function checkSecurity() {
+            const resultDiv = document.getElementById('result');
+            resultDiv.style.display = 'block';
+            resultDiv.innerHTML = 'Checking security status...';
+
+            try {
+                const response = await fetch('/security-status');
+                const data = await response.json();
+                
+                resultDiv.innerHTML = `
+                    <strong>🔐 Security Status</strong><br>
+                    Helmet: ${data.security.helmet}<br>
+                    CORS: ${data.security.cors}<br>
+                    Rate Limit: ${data.security.rateLimit}<br>
+                    Session: ${data.security.session}<br>
+                    HTTPS: ${data.security.https}<br>
+                    CSP: ${data.security.csp}<br>
+                    HSTS: ${data.security.hsts}
+                `;
+            } catch (error) {
+                resultDiv.innerHTML = `
+                    <strong>❌ Security Check Failed</strong><br>
+                    Error: ${error.message}
+                `;
+            }
+        }
+
+        // Auto-update status every 30 seconds
+        setInterval(() => {
+            document.querySelector('.domain-info h2').style.animation = 'pulse 2s infinite';
+        }, 30000);
+    </script>
+</body>
+</html>

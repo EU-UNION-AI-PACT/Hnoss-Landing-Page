@@ -4,3 +4,20 @@ dist
 server/public
 vite.config.ts.*
 *.tar.gz
+
+# Environment files
+.env
+.env.local
+.env.production
+
+# Security and deployment files
+ssl/
+logs/
+fail2ban/
+
+# Log files
+*.log
+*.pid
+
+# OS files
+Thumbs.db
